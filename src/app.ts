@@ -9,11 +9,7 @@ import "./styles.scss";
 import samleTemplate from "./html/sample.template.html";
 
 /* Vendor code */
-import * as $ from "jquery";
-
-/* App code */
-import {Shouter} from "./ts/shouter";
-
+// import * as $ from "jquery";
 
 const appDiv = document.getElementById("app");
 if (appDiv) {
@@ -22,13 +18,8 @@ if (appDiv) {
     appDiv.innerHTML += samleTemplate;
 }
 
-/* Using typescript class */
-const shouter = new Shouter();
-console.log(shouter.shout("hello world!"));
-
-
 /* Using third-party .js code with typings - jQuery */
-$(document).ready(() => {
-    $("#app").css("font-style", "italic");
-});
+// $(document).ready(() => {
+//     $("#app").css("font-style", "italic");
+// });
 

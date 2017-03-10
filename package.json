@@ -14,7 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jasmine": "^2.5.43",
-    "@types/jquery": "^2.0.40",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "html-loader": "^0.4.5",
@@ -35,7 +34,5 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },
-  "dependencies": {
-    "jquery": "^2.1.0"
-  }
+  "dependencies": {}
 }

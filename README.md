@@ -1,21 +1,12 @@
-# Typescript + Sass Webapp Webpack configuration.
+# Loan installments calculator.
 
-## Features
-
-* Features two modes: Production & Development:
-    * in production the Javascript and CSS files are minified & uglified
-    * file names contain (parts of) content hashes to prevent them from being cached.
-    Vendor javascript bundle is not renamed as we want it to be cached.
-    * source maps for .ts and .scss files are available in dev mode
-* dev server with .ts, .scss, .html watches and live reload
-* tslint - both app and test files are checked with tslint as part of the build process
-* allows loading (requiring) html files as strings in Typescript files
-* already configured unit testing framework with karma + jasmine + source maps for debugging
-* vendor code is extracted into a separate bundle and *not* repeated in app's proprietary code
-* examples of using third-party libraries: jQuery and jasmine
-* sample test specs included
-* sample .scss file
-* sample .ts module
+## How to build
+* `npm install` and then `nmp run build`
+* Then use other npm scripts, as described below, to work on the app (build, run development
+    server, and test)
+* CAUTION: this app was created in Windows and may thus require some additional steps
+    to be usable in other OSes (e.g. environnment variables in npm scripts are set in a
+    different way)
 
 
 ## npm scripts
@@ -50,15 +41,3 @@
 * /tsconfig.json - Typescript compiler configuration
 * /tslint.json - Typescript linter configuration
 * /webpack.config.js - main Webpack configuration file 
-
-
-## How to use
-* `npm install` and then use nmp scripts, as described above, to build, run development
-    server, and test the app
-* CAUTION: this starter was created in Windows and may thus require some additional steps
-    to be usable in other OSes (e.g. environnment variables in npm scripts are set in a
-    different way)
-
-## What's not covered
-* loading other files, e.g. images (see file-loader and url-loader)
-* tree-shaking

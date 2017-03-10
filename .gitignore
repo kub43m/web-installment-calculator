@@ -1,3 +1,6 @@
 # Ignore built app files and node modules
 dist/
 node_modules/
+
+#npm error log
+npm-debug.log

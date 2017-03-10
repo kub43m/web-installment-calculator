@@ -1,2 +1,4 @@
 // Third-party libraries
-import "jquery";
+
+// for example (jquery not installed!):
+// import "jquery";
