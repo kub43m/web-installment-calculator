@@ -1,0 +1,27 @@
+$color-link:            orange;
+$color-link-hover:      red;
+$link-underlined:       false;
+$link-underlined-hover: true;
+
+
+a {
+    color: $color-link;
+
+    @if ($link-underlined == false) {
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: $color-link-hover;
+
+        @if ($link-underlined-hover == false) {
+            text-decoration: none;
+        }
+
+        @if ($link-underlined-hover == true) {
+            text-decoration: underline;
+        }
+
+    }
+
+}

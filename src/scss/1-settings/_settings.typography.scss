@@ -1,0 +1,27 @@
+// Raw numbers template:
+
+// $base-font-size:        16px;
+// $base-line-height:      24px; // 1.5 * $base-line-height 
+
+// $font-size-h1:          32px;
+// $font-size-h2:          28px;
+// $font-size-h3:          24px;
+// $font-size-h4:          20px;
+// $font-size-h5:          16px;
+// $font-size-h6:          14px;
+
+
+// This is to reflect the above:
+$base-font-size:        16px;
+$base-line-height:      round(1.5 * $base-font-size); 
+
+$font-size-h1:          round(2 * $base-font-size);
+$font-size-h2:          round(1.75 * $base-font-size);
+$font-size-h3:          round(1.5 * $base-font-size);
+$font-size-h4:          round(1.25 * $base-font-size);
+$font-size-h5:          $base-font-size;
+$font-size-h6:          round(0.875 * $base-font-size);
+
+
+$base-font-family:      Helvetica, sans-serif;
+$base-text-color:       #333;

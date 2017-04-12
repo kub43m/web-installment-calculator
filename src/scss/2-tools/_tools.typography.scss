@@ -1,0 +1,19 @@
+/** 
+ * A mixin to set the font size to appropriate REM (with pixel fallback) + set appropriate line height
+ */
+
+@mixin font-size($font-size) {
+    // REM with px fallback
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+    
+    // Set line height to the lowest multiple of base-line-height in which the font size fits.
+    // E.g. $base-line-height = 24px, $font-size = 20px => we want line-height = 1.2, so that when
+    // we multiply $font-size by it, we'll obtain 24px;
+    // If, however, $font-size = 32px, then this line-height would be too small and we would need
+    // line-height = 1.5 so that in px it's 48px (= 2 * $base-line-height) 
+    $lowest-multiple: ceil($font-size / $base-line-height);
+    $unitless-line-height: $base-line-height / $font-size; // so that $font-size * $unitless-line-height = $base-line-height 
+    line-height: $lowest-multiple * $unitless-line-height;  
+    // line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+}

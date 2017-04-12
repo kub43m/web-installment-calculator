@@ -1,0 +1,31 @@
+/**
+ * CSS structure based on Harry Roberts' ITCSS (Inverted Triangle CSS)
+ * (see http://itcss.io/)
+ */
+
+// All app styles need to be imported here:
+@import "./test";
+
+/* 1) Settings - Global variables, config switches */
+@import "./1-settings/settings.colors";
+@import "./1-settings/settings.typography";
+
+/* 2) Tools - Default mixins and functions */
+@import "./2-tools/tools.typography";
+
+/* 3) Generic - Ground-zero styles (Normalize.css, resets, box-sizing */
+@import "./3-generic/generic.normalize.scss";
+@import "./3-generic/generic.reset.scss";
+@import "./3-generic/generic.box-sizing.scss";
+@import "./3-generic/generic.shared.scss";
+
+/* 4) Base - Unclassed HTML elements (type selectors)  */
+@import "./4-base/base.page";
+@import "./4-base/base.headings";
+@import "./4-base/base.links";
+
+/* 5) Objects - Cosmetic-free design patterns */
+
+/* 6) Components - Designed components, chunks of UI */
+
+/* 7) Utilities - Helpers and overrides */

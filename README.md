@@ -1,3 +1,5 @@
+# THIS IS STILL WORK IN PROGRESS!
+
 # Loan installments calculator.
 
 ## How to build
