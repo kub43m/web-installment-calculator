@@ -4,10 +4,11 @@
  */
 
 // All app styles need to be imported here:
-@import "./test";
 
 /* 1) Settings - Global variables, config switches */
+@import "./1-settings/settings.box-shadow";
 @import "./1-settings/settings.colors";
+@import "./1-settings/settings.dimensions";
 @import "./1-settings/settings.typography";
 
 /* 2) Tools - Default mixins and functions */
@@ -27,5 +28,11 @@
 /* 5) Objects - Cosmetic-free design patterns */
 
 /* 6) Components - Designed components, chunks of UI */
+@import "./6-components/components.app-container";
+@import "./6-components/components.app-header";
+@import "./6-components/components.app-footer";
+@import "./6-components/components.app-body";
+@import "./6-components/components.calculator-input";
+
 
 /* 7) Utilities - Helpers and overrides */

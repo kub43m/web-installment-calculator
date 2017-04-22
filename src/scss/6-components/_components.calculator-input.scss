@@ -1,0 +1,36 @@
+$box-shadow-card: $box-shadow-standard;
+$input-row-spacing: $base-line-height / 8;
+
+.calculator-input {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: $box-shadow-card;
+    background-color: #fff;
+    padding: $base-line-height;
+    margin: $base-line-height;
+
+    &__inputs-container {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: $base-line-height;
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: $input-row-spacing;
+    }
+
+    &__input-name {
+        flex: 1 0 0%;
+    }
+
+    &__input-value {
+        flex: 1 0 0%;
+    }
+
+    &__button {
+        width: 100px;
+    }
+}

@@ -1,0 +1,10 @@
+$color-app-background: $color-gray;
+
+.app-container {
+    background-color: $color-app-background;
+    // to fight margin collapising within the container:
+    // without it if its first child has margin top, it'll be forced
+    // onto <body> 
+    display: inline-block;
+    width: 100%;
+}

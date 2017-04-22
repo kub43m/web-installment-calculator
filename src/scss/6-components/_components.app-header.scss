@@ -1,0 +1,34 @@
+$header-box-shadow: $box-shadow-strong;
+$settings-button-height: 20px;
+$settings-button-top: ($app-header-height - $settings-button-height) / 2; // TODO: round!
+$settings-button-right: 30px;
+
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    height: $app-header-height;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    box-shadow: $header-box-shadow;
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &__settings-button {
+        position: absolute;
+        height: $settings-button-height;
+        right: $settings-button-right;
+        top: $settings-button-top;
+        font-size: 14px;
+        border-radius: 50%;
+        border: none;
+    }
+}

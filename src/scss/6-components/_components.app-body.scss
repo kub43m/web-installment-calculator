@@ -1,0 +1,11 @@
+$app-body-top-margin: $app-header-height + $base-line-height;
+$app-body-bottom-margin: $base-line-height;
+
+$header-and-footer-adjustment: $app-body-top-margin + $app-body-bottom-margin + $app-footer-height; 
+
+.app-body {
+    // need to use #{} in order to interpolate sass variable within calc()
+    min-height: calc(100vh - #{$header-and-footer-adjustment});
+    margin-top: $app-body-top-margin;
+    margin-bottom: $app-body-bottom-margin;
+}
