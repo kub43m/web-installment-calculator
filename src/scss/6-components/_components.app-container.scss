@@ -4,7 +4,10 @@ $color-app-background: $color-gray;
     background-color: $color-app-background;
     // to fight margin collapising within the container:
     // without it if its first child has margin top, it'll be forced
-    // onto <body> 
+    // onto <body>, see:
+    // http://stackoverflow.com/questions/23788169/why-is-setting-the-top-margin-of-this-child-element-pushing-its-parent-container 
+    // http://stackoverflow.com/questions/26311891/unexpected-body-body-behaviour-as-its-pushed-down-by-childs-margin-top
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
     display: inline-block;
     width: 100%;
 }

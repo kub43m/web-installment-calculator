@@ -1,55 +1,115 @@
 <div class="calculator-input">
-    <div class="calculator-input__inputs-container">
+    
+    <form id="calculator-input-form"
+          class="calculator-input__inputs-container">
+
         <div class="calculator-input__row">
-            <div class="calculator-input__input-name">
+            <label for="calculator-input-loan-amount"
+                   class="calculator-input__input-name">
                 Loan amount:
-            </div>
+            </label>
+            
             <div class="calculator-input__input-value">
-                <input type="number"
-                       min="0.01"
-                       step="0.01">
+                <input id="calculator-input-loan-amount"
+                       class="calculator-input__input-value"
+                       name="loanAmount" 
+                       type="number"
+                       min="1"
+                       step="1"
+                       value="1000">
             </div>
         </div>
 
         <div class="calculator-input__row">
-            <div class="calculator-input__input-name">
+            <label for="calculator-input-interest-rate" 
+                   class="calculator-input__input-name">
                 Interest rate:
-            </div>
+            </label>
+
             <div class="calculator-input__input-value">
-                <input>
+                <input id="calculator-input-interest-rate"
+                       name="interestRate"
+                       type="number"
+                       min="0.001"
+                       setp="0.001"
+                       max="1"
+                       value="0.05">
             </div>
         </div>
 
         <div class="calculator-input__row">
-            <div class="calculator-input__input-name">
+            <label for="calculator-input-number-of-periods" 
+                   class="calculator-input__input-name">
                 Number of periods:
-            </div>
+            </label>
+
             <div class="calculator-input__input-value">
-                <input type="number"
-                       min="1">
+                <!--<input id="calculator-input-number-of-periods"
+                       name="numberOfPeriods"
+                       type="range"
+                       min="1"
+                       max="50"
+                       step="1"
+                       value="1">-->
+
+                    <!-- switch to range if slider is to be implemented -->
+                    <input id="calculator-input-number-of-periods"
+                       name="numberOfPeriods"
+                       type="number"
+                       min="1"
+                       max="50"
+                       step="1"
+                       value="1">
+
+                <label>
+                    <input type="radio" name="periodsType" value="MONTHS"> Months
+                </label>
+                <label>
+                    <input type="radio" name="periodsType" value="YEARS" checked> Years
+                </label>
             </div>
         </div>
 
         <div class="calculator-input__row">
-            <div class="calculator-input__input-name">
+            <label class="calculator-input__input-name">
                 Repayment frequency:
-            </div>
+            </label>
             <div class="calculator-input__input-value">
-                <input>
+                <label>
+                    <input type="radio" name="frequencyType" value="MONTHLY" checked> Monthly
+                </label>
+                <label>
+                    <input type="radio" name="frequencyType" value="YEARLY"> Yearly
+                </label>
             </div>
         </div>
 
         <div class="calculator-input__row">
-            <div class="calculator-input__input-name">
+            <label for="calculator-input-repayment-mode"
+                   class="calculator-input__input-name">
                 Repayment mode:
-            </div>
+            </label>
             <div class="calculator-input__input-value">
-                <input>
+                <select id="calculator-input-repayment-mode"
+                        name="repaymentMode">
+                    <option value="CONSTANT_CAPITAL_PART" selected>Constant capital part</option>
+                    <option value="CONSTANT_INSTALLMENT">Constant installment</option>
+                    <option value="CAPITAL_AND_INTEREST_AT_END">Capital and interest paid at the end</option>
+                    <option value="CAPITAL_AT_END_INTEREST_PERIODICALLY">Capital paid at the end, interest every period</option>
+                </select>
             </div>
         </div>
-    </div>
+    
+        <button id="calculator-input-calculate-button"
+                type="button"
+                class="calculator-input__button">
+            Calculate
+        </button>
 
-    <button class="calculator-input__button">
-        Calculate
-    </button>
+        <button type="reset" class="calculator-input__button">
+            Reset
+        </button>
+
+    </form>
+
 </div>
