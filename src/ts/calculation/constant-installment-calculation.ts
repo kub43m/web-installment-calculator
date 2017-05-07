@@ -40,12 +40,12 @@ export class ConstantInstallmentCalculation implements InstallmentCalculation {
      *
      * Every month, the same installment is paid, but the installment has different present value (computed at the
      * moment of obtaining the loan) - the smaller the further it is in time from the moment of taking the loan.
-     * 
+     *
      * We assume the interest rate is constant throughout the lifetime of the loan.
-     * 
+     *
      * For example, the first payment has present value of CF_1 / v1 = CF_1 / v, second payment has value of
      * CF_2 / v2 = CF_2 / v1 * v1 = CF_2 / v^2 and so on.
-     * 
+     *
      * (CF_i and vi are i-th Cash Flow and discount factor, respectively). Because each cash flow is equal, we obtain:
      * CF_1 = CF_2 = ... = CF_n =: CF. Loan value (initial debt) K is the present value of all future payments, hence:
      *
